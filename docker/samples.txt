@@ -1,0 +1,15 @@
+docker build --tag vivethereeshop:1.1 --file ./src/web/Dockerfile_elm8 .
+
+docker build --tag vivethereapi:1.1 --file ./src/publicapi/Dockerfile_elm8 .
+
+docker run -p 127.0.0.1:44315:443 7af
+
+docker localhost https port mapping
+https://docs.microsoft.com/en-us/aspnet/core/security/docker-https?view=aspnetcore-6.0
+
+
+docker run --rm -it -p 5098:80 -p 5099:443 -e ASPNETCORE_URLS="https://+;http://+" -e ASPNETCORE_HTTPS_PORT=5099 -e ASPNETCORE_Kestrel__Certificates__Default__Password="{hty$Ve[hty1" -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx -v $env:USERPROFILE\.aspnet\https:/https/ vivethereapi:latest
+
+
+
+https://docs.microsoft.com/en-us/archive/blogs/appconsult/introduction-to-docker-create-a-multi-container-application
